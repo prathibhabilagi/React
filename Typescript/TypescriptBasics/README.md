@@ -7,6 +7,7 @@
 ## Compile (typescript to javascript)
  => Single file :
     -> tsc filename
+    <br/>
  => Mutiple files in a folder (create tsconfig.json file) :
     -> tsc -w
  
