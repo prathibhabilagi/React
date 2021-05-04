@@ -24,3 +24,27 @@ class Employee {
 
 const emp = new Employee(1, "Tae", "Seoul", 26);
 console.log(emp);
+
+
+//<------------- OOP concpect with inheritance -------------->
+
+class Human {
+    fname: string;
+    lname: string;
+    age: number;
+
+    sayHello(): string {
+        return `My name is ${this.fname} ${this.lname}`
+    }
+}
+
+class Agent extends Human {
+    department: string;
+}
+
+const agent1 = new Agent();
+agent1.fname = "Tae"
+agent1.department = "Kpop";
+console.log(agent1.sayHello());
+
+
