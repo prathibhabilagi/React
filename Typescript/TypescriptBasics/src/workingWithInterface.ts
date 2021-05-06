@@ -60,3 +60,53 @@ car.landing();
 const car1: MotorVehicle = new Car();
 car1.accelerate(80);
 //car1.driving(); //Error
+
+
+
+
+
+// Class Inhertiance
+
+interface Members {
+    name: string;
+    age: number;
+    profession: string;
+    song(songName: string): string;
+    dance(): boolean;
+}
+
+interface Traniee {
+    practice(): boolean;
+}
+
+
+class Kpop implements Members, Traniee {
+    //Implements method from Members interface
+    name: string = "Tae";
+    age: number = 26;
+    profession: string = "Singer"; 
+
+    song(songName: string): string {
+        return `Song name is ${songName}`
+    }
+
+    dance():  boolean {
+        return true;
+    }
+
+    //Implements method from Traniee interface
+    practice(): boolean {
+        return true;
+    }
+}
+
+//class inheritance
+class Music extends Kpop {
+
+    song(songName: string): string {
+        return `Song name => ${songName}`
+    }
+}
+
+const Music1 = new Music();
+console.log(Music1.song('Boy with Luv'));
