@@ -37,3 +37,29 @@ car.landing();
 const car1 = new Car();
 car1.accelerate(80);
 //car1.driving(); //Error
+
+//--------------- Class Inheritance ---------------------
+
+class Kpop {
+    constructor() {
+        this.name = "Tae";
+        this.age = 26;
+        this.profession = "Singer";
+    }
+    song(songName) {
+        return `Song name is ${songName}`;
+    }
+    dance() {
+        return true;
+    }
+    practice() {
+        return true;
+    }
+}
+class Music extends Kpop {
+    song(songName) {
+        return `Song name => ${songName}`;
+    }
+}
+const Music1 = new Music();
+console.log(Music1.song('Boy with Luv'));
