@@ -31,3 +31,24 @@ const prodService = new ProductService();
 
 prodService.getProducts(123);
 prodService.getProducts();
+
+
+//Overloading constructors
+class Product {
+    id: number;
+    description: string;
+
+    //no-arg constructor declaration
+    constructor();
+
+    //one-arg constructor declaration
+    constructor(id: number);
+
+    //two-arg constructor declaration
+    constructor(id: number, description: string);
+
+    //implementation of constructor handling all possible arguments
+    constructor(id?: number, description?: string) {
+        console.log(`${id}`);
+    }
+}
